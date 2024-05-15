@@ -1,0 +1,5 @@
+vendor/
+examples/
+.idea/
+.trash/
+*.log
