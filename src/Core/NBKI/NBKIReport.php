@@ -57,30 +57,6 @@ class NBKIReport
     }
 
     /**
-     * Экспорт ошибок НБКИ-отчёта
-     * @param string $fileName
-     * @param string $separator
-     * @return $this
-     */
-    /*
-    public function export(string $fileName, string $separator = ';') : self
-    {
-        try {
-            $fileErrorsName = $fileName . "_errors.txt";
-            $this->CSVProvider->exportAsCSV_ANSI($this->getErrorsData(), $fileErrorsName, $separator);
-
-            $fileAllocatedErrorsName = $fileName . "_errors_allocated.txt";
-            $this->CSVProvider->exportAsCSV_ANSI($this->getAllocatedErrorsData(), $fileAllocatedErrorsName, $separator);
-        } catch (\Throwable $e) {
-            echo __CLASS__ . "|" . __FUNCTION__ . "|Ошибка выгрузки отчёта: {$e->getMessage()}\n";
-            exit();
-        }
-
-        return $this;
-    }
-    */
-
-    /**
      * Получить данные НБКИ-отчёта
      */
     public function getParsed() : array
