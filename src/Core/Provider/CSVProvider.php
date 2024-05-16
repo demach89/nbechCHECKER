@@ -24,7 +24,7 @@ Class CSVProvider
      */
     public function importAsCSV_ussoc(string $fileName, string $separator=";", int $skipHeadersCounter=0) : self
     {
-        $this->importPath = IMPORT_DIR . "/$fileName";
+        $this->importPath = __DIR__ . "/../../../" . IMPORT_DIR . "/$fileName";
 
         $this->separator = $separator;
 
@@ -95,7 +95,7 @@ Class CSVProvider
      */
     public function exportAsCSV_UTF8(array $data, string $fileName, string $separator=";") : self
     {
-        $exportPath = EXPORT_DIR . "/$fileName";
+        $exportPath = __DIR__ . "/../../../" . EXPORT_DIR . "/$fileName";
 
         try {
             $fp = fopen($exportPath, 'w');
@@ -131,7 +131,7 @@ Class CSVProvider
      */
     public function fileUTF8toANSI(string $fileName) : self
     {
-        $path = EXPORT_DIR . "/$fileName";
+        $path = __DIR__ . "/../../../" . EXPORT_DIR . "/$fileName";
 
         try {
             if (file_exists($path)) {
